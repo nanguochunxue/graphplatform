@@ -1,0 +1,65 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_invest/7JFL54944ADEE991715A1D521C6DFL03",
+        "_from": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "invest_amount": 160000000,
+        "invest_amount_unit": "元"
+      },
+      {
+        "_id": "te_invest/61A994944ADEE991715A1D521C6DFL03",
+        "_from": "Company/7908891a00d02b29354c4dd5147de439",
+        "_to": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "invest_amount": 600000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "name": "江河创建集团股份有限公司",
+        "reg_capital": 1154050000,
+        "reg_currency": "元"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_invest/1D61B8944ADEE991715A1D521C6DFL03",
+        "_from": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "_to": "Company/36d37c063ee31a5aebcc3667af028715",
+        "invest_amount": 130000000,
+        "invest_amount_unit": "元"
+      },
+      {
+        "_id": "te_invest/3EE31A944ADEE991715A1D521C6DFL03",
+        "_from": "Company/36d37c063ee31a5aebcc3667af028715",
+        "_to": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "invest_amount": 500000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/36d37c063ee31a5aebcc3667af028715",
+        "name": "江苏红豆实业股份有限公司",
+        "reg_capital": 3000000000,
+        "reg_currency": "元"
+      },
+      {
+        "_id": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "name": "江河创建集团股份有限公司",
+        "reg_capital": 1154050000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

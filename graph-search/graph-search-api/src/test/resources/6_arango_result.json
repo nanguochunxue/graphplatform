@@ -1,0 +1,23 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_concert/e7e6823dc3d934432b81bc6bb95b32ce3",
+        "_from": "Company/36d37c063ee31a5aebcc3667af028715",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "attr": "一致行动人"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/36d37c063ee31a5aebcc3667af028715",
+        "name": "江苏红豆实业股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

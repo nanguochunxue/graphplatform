@@ -1,0 +1,26 @@
+{
+  "graph": "crm_dev2",
+  "tagId": 1000000003,
+  "tagCategoryId": 101,
+  "tagName": "测试标签1",
+  "tagDesc": "测试标签111",
+  "tagGroup": "SYSTEM",
+  "originalRule": {
+    "expression": "",
+    "logicOperators": [
+      "AND"
+    ],
+    "rules": [
+      {
+        "expression": "@sql(40500152.rank) > 0.05*@sql(40500151.count$1$)",
+        "logicOperators": [],
+        "rules": []
+      },
+      {
+        "expression": "@sql(40500152.rank) <= 0.1*@sql(40500151.count$1$)",
+        "logicOperators": [],
+        "rules": []
+      }
+    ]
+  }
+}

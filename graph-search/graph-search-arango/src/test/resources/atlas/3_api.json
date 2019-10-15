@@ -1,0 +1,25 @@
+{
+  "graph": "crm_dev2",
+  "startVertices": [
+    "Company/7908891a00d02b29354c4dd5147de439"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_officer"
+  ],
+  "direction": "ANY",
+  "maxDepth": 2,
+  "maxSize": 1000,
+  "resultType": "tree",
+  "rule": {
+    "te_officer": {
+      "label": "@field(te_officer.position)"
+    },
+    "Company": {
+      "label": "@field(Company.name)"
+    },
+    "Person": {
+      "label": "@field(Person.name)"
+    }
+  }
+}

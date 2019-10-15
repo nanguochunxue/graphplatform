@@ -1,0 +1,10 @@
+{
+  "graph": "crm_dev2",
+  "id": 1000000003,
+  "tagCategoryId": 101,
+  "tagName": "测试标签1",
+  "tagDesc": "测试标签11122",
+  "tagGroup": "SYSTEM",
+  "analyticsMode": "LOGIC",
+  "dataType": "BOOLEAN"
+}

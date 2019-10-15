@@ -1,0 +1,46 @@
+{
+    "from": 0,
+    "size": 5,
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "must": [
+                            {
+                                "bool": {
+                                    "must": [
+                                        {
+                                            "bool": {
+                                                "adjust_pure_negative": true,
+                                                "boost": 1.0
+                                            }
+                                        },
+                                        {
+                                            "term": {
+                                                "task_id": {
+                                                    "value": 7,
+                                                    "boost": 1.0
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0
+                                }
+                            }
+                        ],
+                        "adjust_pure_negative": true,
+                        "boost": 1.0
+                    }
+                }
+            ],
+            "adjust_pure_negative": true,
+            "boost": 1.0
+        }
+    },
+    "_source": {
+        "includes": [],
+        "excludes": []
+    }
+}

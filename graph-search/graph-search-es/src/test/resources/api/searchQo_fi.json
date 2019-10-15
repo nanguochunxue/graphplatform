@@ -1,0 +1,27 @@
+{
+    "debug":false,
+    "filter":{
+        "logicOperator":"OR",
+        "rules":[
+            {
+                "schema":"Company",
+                "field":"name",
+                "schemaType":"VERTEX",
+                "boost":1.0,
+                "fieldType":"STRING",
+                "value":"北京海致",
+                "operator":"MATCH"
+            }
+        ]
+    },
+    "graph":"test_data_all",
+    "highlight":false,
+    "internalOption":{
+        "debug":false
+    },
+    "pageNo":0,
+    "pageSize":10,
+    "query":[],
+    "schemas":["Company"],
+    "timeout":15
+}

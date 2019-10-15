@@ -1,0 +1,43 @@
+{
+    "graph": "test",
+    "type": "FULL_PATH",
+    "startVertices": [
+        "Company/7908891a00d02b29354c4dd5147de439"
+    ],
+    "endVertices": [
+        "Company/36d37c063ee31a5aebcc3667af028715"
+    ],
+    "vertexTables": [
+        "Company",
+        "Person"
+    ],
+    "edgeTables": [
+        "te_guarantee",
+        "te_invest",
+        "te_officer",
+        "te_transfer"
+    ],
+    "direction": "ANY",
+    "maxDepth": 3,
+    "maxSize": 5,
+    "filter": {
+        "logicOperator": "AND",
+        "rules": [
+            {
+                "logicOperators": "AND",
+                "rules": [
+                    {
+                        "schema": "Person",
+                        "fieldNameCn": "姓名",
+                        "field": "name",
+                        "schemaId": "1000001",
+                        "schemaType": "VERTEX",
+                        "fieldType": "STRING",
+                        "value": "杨再飞",
+                        "operator": "NOT_EQ"
+                    }
+                ]
+            }
+        ]
+    }
+}

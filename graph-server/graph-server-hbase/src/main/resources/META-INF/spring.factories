@@ -1,0 +1,1 @@
+#org.springframework.context.ApplicationContextInitializer=\com.haizhi.graph.common.context.Ctx

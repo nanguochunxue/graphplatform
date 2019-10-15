@@ -1,0 +1,44 @@
+{
+  "expression":"",
+  "logicOperators":[
+    "AND"
+  ],
+  "rules":[
+    {
+      "expression":"",
+      "logicOperators":[
+        "AND"
+      ],
+      "rules":[
+        {
+          "expression":"",
+          "logicOperators":[
+            "AND"
+          ],
+          "rules":[
+            {
+              "expression":"@tag(70100101.value.count$1$) = 2112",
+              "logicOperators":[],
+              "rules":[]
+            },
+            {
+              "expression":"@tag(70200101.value.count$1$) = 2",
+              "logicOperators":[],
+              "rules":[]
+            }
+          ]
+        },
+        {
+          "expression":"@tag(70100101.value.count$1$) = 11",
+          "logicOperators":[],
+          "rules":[]
+        }
+      ]
+    },
+    {
+      "expression":"@tag(70100101.value.count$1$) = 1",
+      "logicOperators":[],
+      "rules":[]
+    }
+  ]
+}

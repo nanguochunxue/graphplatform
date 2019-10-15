@@ -1,0 +1,2 @@
+demo_graph
+GET /gap_fi_test.company/_mappings

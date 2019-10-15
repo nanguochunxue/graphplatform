@@ -1,0 +1,17 @@
+WITH Company, Person
+FOR start IN ['Company/7908891a00d02b29354c4dd5147de439']
+FOR v,e,p IN 1..2
+ANY start
+te_guarantee
+options {bfs:true,uniqueVertices:'path'}
+
+
+LET newEdges=p.edges[
+* FILTER IS_SAME_COLLECTION('te_guarantee', CURRENT._id)
+return CURRENT
+]
+
+FILTER LENGTH(newEdges) > 0 AND LENGTH(newEdges) == LENGTH(p.edges)
+
+
+RETURN p

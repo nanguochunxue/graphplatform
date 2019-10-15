@@ -1,0 +1,31 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_guarantee/DF3L54944ADEE991715A1D521C6903FF",
+        "_from": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "guarantee_amount": 100000000,
+        "currency": "元"
+      },
+      {
+        "_id": "te_guarantee/35FT54944ADEE991715A1D521C6998HY",
+        "_from": "Company/7908891a00d02b29354c4dd5147de439",
+        "_to": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "guarantee_amount": 8000000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "name": "江河创建集团股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

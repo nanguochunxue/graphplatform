@@ -1,0 +1,18 @@
+{
+  "graph": "crm_dev2",
+  "schema": "tv_outer_event",
+  "sources": [
+    {
+      "objectKey": "DF3L54944ADEE991715A1D521C6903FF",
+      "source": {
+        "browse_count": 100
+      }
+    },
+    {
+      "objectKey": "635485D944ADEE991715A1D5JFKXX9380",
+      "source": {
+        "browse_count": 200
+      }
+    }
+  ]
+}

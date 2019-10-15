@@ -1,0 +1,42 @@
+{
+  "graph": "crm_dev2",
+  "startVertices": [
+    "Company/7908891a00d02b29354c4dd5147de439"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_transfer"
+  ],
+  "direction": "ANY",
+  "maxDepth": 2,
+  "maxSize": 1000,
+  "resultType": "tree",
+  "rule": {
+    "te_transfer": {
+      "label": "转账@value(_count)次 @value(edgeScript)万",
+      "edgeScript": "sum(@field(te_transfer.transfer_amount))/10000",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction",
+        "newVertices": {
+          "Company": {
+            "vertexTable": "Company",
+            "fromVertexLabel": "转入企业",
+            "toVertexLabel": "转出至企业"
+          },
+          "Person": {
+            "vertexTable": "Person",
+            "fromVertexLabel": "转入自然人",
+            "toVertexLabel": "转出至个人"
+          }
+        }
+      }
+    },
+    "Company": {
+      "label": "@field(Company.name)"
+    },
+    "Person": {
+      "label": "@field(Person.name)"
+    }
+  }
+}

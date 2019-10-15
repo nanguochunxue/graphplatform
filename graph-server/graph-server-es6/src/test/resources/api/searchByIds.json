@@ -1,0 +1,11 @@
+{
+    "graph": "demo_graph1",
+    "schemaKeys": {
+        "demo_vertex": [
+            "1000",
+            "1001"
+        ]
+    },
+    "pageNo": 0,
+    "pageSize": 10
+}

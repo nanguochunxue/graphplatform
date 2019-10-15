@@ -1,0 +1,78 @@
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "multi_match": {
+                                    "query": "公司",
+                                    "fields": [
+                                        "name.keyword"
+                                    ],
+                                    "type": "best_fields",
+                                    "operator": "OR",
+                                    "slop": 0,
+                                    "prefix_length": 0,
+                                    "max_expansions": 50,
+                                    "tie_breaker": 0.3,
+                                    "lenient": false,
+                                    "zero_terms_query": "NONE",
+                                    "boost": 3.0
+                                }
+                            },
+                            {
+                                "match_phrase": {
+                                    "name.keyword": {
+                                        "query": "公司",
+                                        "slop": 3,
+                                        "boost": 3.0
+                                    }
+                                }
+                            },
+                            {
+                                "multi_match": {
+                                    "query": "公司",
+                                    "fields": [
+                                        "reg_address^3.0"
+                                    ],
+                                    "type": "best_fields",
+                                    "operator": "OR",
+                                    "slop": 0,
+                                    "prefix_length": 0,
+                                    "max_expansions": 50,
+                                    "tie_breaker": 0.3,
+                                    "lenient": false,
+                                    "zero_terms_query": "NONE",
+                                    "boost": 3.0
+                                }
+                            },
+                            {
+                                "match_phrase": {
+                                    "reg_address": {
+                                        "query": "公司",
+                                        "slop": 3,
+                                        "boost": 3.0
+                                    }
+                                }
+                            }
+                        ],
+                        "disable_coord": false,
+                        "adjust_pure_negative": true,
+                        "boost": 1.0
+                    }
+                }
+            ],
+            "disable_coord": false,
+            "adjust_pure_negative": true,
+            "boost": 1.0
+        }
+    },
+    "_source": {
+        "includes": [],
+        "excludes": []
+    }
+}

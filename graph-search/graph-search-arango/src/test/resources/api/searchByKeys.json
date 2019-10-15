@@ -1,0 +1,15 @@
+{
+    "graph":"test",
+    "schemas": {
+        "Company": [
+            "344ae9c5f3862cf40bfd6121112a9c14",
+            "81dcf84eea186e9c04c18b35bcf13bf6",
+            "f4dc00871d6c31c5ca85fd0cb4cd08ef"
+        ],
+        "te_guarantee": [
+            "JFK3L54944ADEE991715A1D521C68311",
+            "JFK3L54944ADEE991715A1D521C68310",
+            "PO3FL54944ADEE991715A1D521C68341"
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "data": {
+        "vertices": [
+            "vertex/902740",
+            "vertex/3357440",
+            "vertex/3821024",
+            "vertex/2902827",
+            "vertex/3662058"
+        ],
+        "edges": [
+            "edge/287197511",
+            "edge/301780460",
+            "edge/290665265"
+        ]
+    },
+    "database": "graph500",
+    "total": 0
+}

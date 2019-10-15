@@ -1,0 +1,26 @@
+{
+  "param": {
+    "graph_db": {
+      "name": "csytest1"
+    },
+    "options": {
+      "direction": "ANY",
+      "edges": [
+        "invest"
+      ],
+      "filter": {
+        "edges": [],
+        "nodes": []
+      },
+      "maxDepth": 1,
+      "nodes": [
+        "Company",
+        "Person"
+      ],
+      "with": "Company, Person"
+    }
+  },
+  "startVertexIds": [
+    "Company/513A754AADCB65C9EC78F393F2AAA47B"
+  ]
+}

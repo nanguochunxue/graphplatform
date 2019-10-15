@@ -1,0 +1,79 @@
+{
+    "filter": {
+        "logicOperator": "OR",
+        "rules": [
+            {
+                "schema": "Company",
+                "field": "object_key",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "STRING",
+                "value": "公司",
+                "operator": "MATCH"
+            },
+            {
+                "schema": "Company",
+                "field": "name",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "STRING",
+                "value": "公司",
+                "operator": "MATCH"
+            },
+            {
+                "schema": "Company",
+                "field": "reg_address",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "STRING",
+                "value": "公司",
+                "operator": "MATCH"
+            },
+            {
+                "schema": "Company",
+                "field": "reg_date",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "DATETIME",
+                "value": "公司",
+                "operator": "MATCH"
+            },
+            {
+                "schema": "Company",
+                "field": "ctime",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "DATETIME",
+                "value": "公司",
+                "operator": "MATCH"
+            },
+            {
+                "schema": "Company",
+                "field": "utime",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "DATETIME",
+                "value": "公司",
+                "operator": "MATCH"
+            },
+            {
+                "schema": "Company",
+                "field": "reg_city",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "STRING",
+                "value": "公司",
+                "operator": "MATCH"
+            }
+        ]
+    },
+    "graph": "gap_test_db",
+    "highlight": false,
+    "keyword": "公司",
+    "pageNo": 0,
+    "pageSize": 10,
+    "query": [],
+    "schemas": [
+        "Company"
+    ]
+}

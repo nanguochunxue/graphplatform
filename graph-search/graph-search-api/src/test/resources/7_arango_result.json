@@ -1,0 +1,23 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_actual_controller/71D5654944ADEE991715A1D521C684C3",
+        "_from": "Person/71D5654944ADEE991715A1D521C684C3",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "attr": "actual_control"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/71D5654944ADEE991715A1D521C684C3",
+        "name": "王宁"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

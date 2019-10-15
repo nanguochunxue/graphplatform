@@ -1,0 +1,80 @@
+{
+  "graph": "crm_dev2",
+  "startVertices": [
+    "Company/7908891a00d02b29354c4dd5147de439"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_guarantee"
+  ],
+  "direction": "ANY",
+  "maxDepth": 2,
+  "maxSize": 1000,
+  "resultType": "tree",
+  "rule": {
+    "te_guarantee": {
+      "label": "担保@value(_count)次 @value(edgeScript)万",
+      "edgeScript": "sum(@field(te_guarantee.guarantee_amount))/10000",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction",
+        "newVertices": {
+          "Company": {
+            "vertexTable": "Company",
+            "fromVertexLabel": "担保企业",
+            "toVertexLabel": "对外担保企业"
+          },
+          "Person": {
+            "vertexTable": "Person",
+            "fromVertexLabel": "担保自然人",
+            "toVertexLabel": "对外担保自然人"
+          }
+        }
+      }
+    },
+    "Company": {
+      "label": "@field(Company.name)"
+    },
+    "Person": {
+      "label": "@field(Person.name)"
+    }
+  },
+  "filter": {
+    "logicOperators": ["AND"],
+    "rules": [
+      {
+        "schema": "Company",
+        "schemaType": "vertex",
+        "field": "reg_city",
+        "type": "term",
+        "values": ["北京"]
+      },
+      {
+        "logicOperators": ["OR"],
+        "rules": [
+          {
+            "schema": "Company",
+            "schemaType": "vertex",
+            "field": "reg_city",
+            "type": "term",
+            "values": ["龙岩"]
+          },
+          {
+            "schema": "te_guarantee",
+            "schemaType": "edge",
+            "field": "guarantee_amount",
+            "type": "range",
+            "ranges": [
+              {
+                "from": 6800000,
+                "to": null,
+                "include_lower":true,
+                "include_upper":true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

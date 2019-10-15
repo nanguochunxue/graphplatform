@@ -1,0 +1,71 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_invest/DF3L54944ADEE991715A1D521C6903FF",
+        "_from": "Company/7908891a00d02b29354c4dd5147de439",
+        "_to": "Person/71D5654944ADEE991715A1D521C684C3",
+        "invest_amount": 1160000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/71D5654944ADEE991715A1D521C684C3",
+        "name": "王宁",
+        "type": "1"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_invest/523L54944ADEE991715A1D521C6903FF",
+        "_from": "Company/7908891a00d02b29354c4dd5147de439",
+        "_to": "Person/71D5654944ADEE991715A1D521C684C3",
+        "invest_amount": 1160000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/71D5654944ADEE991715A1D521C684C3",
+        "name": "王宁",
+        "type": "1"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_invest/DF3L54944ADEE991715A1D521C6903FF",
+        "_from": "Company/7908891a00d02b29354c4dd5147de439",
+        "_to": "Person/L3KFL54944A834757515A1D521C6854F",
+        "invest_amount": 240000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/L3KFL54944A834757515A1D521C6854F",
+        "name": "梁力军",
+        "type": "2"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

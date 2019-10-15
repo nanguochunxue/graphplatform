@@ -1,0 +1,37 @@
+{
+    "graph": "tl_dev",
+    "schemas": [
+        "tv_company"
+    ],
+    "keyword": "杭州滔筱",
+    "pageNo": 0,
+    "pageSize": 10,
+    "option": {
+        "log.enabled": true
+    },
+    "internalOption":{
+        "debug": true
+    },
+    "query": [
+        {
+            "schema": "tv_company",
+            "schemaType": "string",
+            "field": "urn",
+            "operator": "MATCH",
+            "boost": 3
+        }
+    ],
+    "filter": {
+        "logicOperator": "AND",
+        "rules": [
+            {
+                "schema": "tv_company",
+                "schemaType": "nothing",
+                "field": "doc_tp_cd",
+                "fieldType": "string",
+                "operator": "EQ",
+                "value": "A0200"
+            }
+        ]
+    }
+}

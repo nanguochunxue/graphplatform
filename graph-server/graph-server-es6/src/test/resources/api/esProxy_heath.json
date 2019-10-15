@@ -1,0 +1,5 @@
+{
+    "graph": "demo_graph",
+    "requestMethod": "GET",
+    "uri": "/_cluster/health/?level=shards"
+}

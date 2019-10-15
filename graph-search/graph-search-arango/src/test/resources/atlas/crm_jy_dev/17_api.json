@@ -1,0 +1,30 @@
+{
+  "graph": "crm_jy_dev",
+  "startVertices": [
+    "company/DF3L54944ADEE991715A1D521C6903FF"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_bank_loan"
+  ],
+  "direction": "INBOUND",
+  "maxDepth": 2,
+  "maxSize": 1000,
+  "resultType": "tree",
+  "rule": {
+    "te_bank_loan": {
+      "label": "@value(edgeScript)万,@value(_count)笔",
+      "edgeScript": "sum(@field(te_bank_loan.amount))",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction"
+      }
+    },
+    "company": {
+      "label": "@field(company.name)"
+    },
+    "tv_bank_list": {
+      "label": "@field(tv_bank_list.name)"
+    }
+  }
+}

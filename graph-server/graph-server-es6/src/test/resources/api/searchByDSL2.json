@@ -1,0 +1,4 @@
+{
+    "graph": "demo_graph.demo_vertex",
+    "queryDSL": "{ \"query\":{ \"match_all\":{} } }"
+}

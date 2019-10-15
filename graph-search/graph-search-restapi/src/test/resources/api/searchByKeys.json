@@ -1,0 +1,13 @@
+{
+    "graph":"demo_graph",
+    "schemaKeys": {
+        "demo_vertex": [
+            "CORGUYWX8QPBHSLZISCZTSA6F79PFM02",
+            "3FSKQRFPZWRZRM9TSICKBO4T6MHTRWGQ"
+        ],
+        "demo_edge": [
+            "XLZYFMMTPKMZT2LWB40J1082M6PQOJM6",
+            "86JMJZGYMVHEXEJ4VG6VEOKTI1A5L2WK"
+        ]
+    }
+}

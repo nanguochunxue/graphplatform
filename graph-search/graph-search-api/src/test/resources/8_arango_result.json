@@ -1,0 +1,162 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_invest/DF3L54944ADEE991715A1D521C6903FF",
+        "_from": "Person/71D5654944ADEE991715A1D521C684C3",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "invest_amount": 1160000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/71D5654944ADEE991715A1D521C684C3",
+        "name": "王宁"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_invest/7JFL54944ADEE991715A1D521C6DFL03",
+        "_from": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "invest_amount": 160000000,
+        "invest_amount_unit": "元"
+      },
+      {
+        "_id": "te_invest/61A994944ADEE991715A1D521C6DFL03",
+        "_from": "Company/7908891a00d02b29354c4dd5147de439",
+        "_to": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "invest_amount": 600000000,
+        "invest_amount_unit": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "name": "江河创建集团股份有限公司",
+        "reg_capital": 1154050000,
+        "reg_currency": "元"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_officer/PO3FL54944ADEE991715A1D521C68332",
+        "_from": "Person/09KFL54944ADEE991715A1D521C68334",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "position": "首席执行官"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/09KFL54944ADEE991715A1D521C68334",
+        "name": "刘连红"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "江苏红豆实业股份有限公司",
+        "reg_capital": 3000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_guarantee/DF3L54944ADEE991715A1D521C6903FF",
+        "_from": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "guarantee_amount": 100000000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "name": "江河创建集团股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_transfer/e7e6823dc3d934432b81bc6bb95b32ce3",
+        "_from": "Company/36d37c063ee31a5aebcc3667af028715",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "transfer_amount": 95000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/36d37c063ee31a5aebcc3667af028715",
+        "name": "江苏红豆实业股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_concert/e7e6823dc3d934432b81bc6bb95b32ce3",
+        "_from": "Company/36d37c063ee31a5aebcc3667af028715",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "attr": "一致行动人"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/36d37c063ee31a5aebcc3667af028715",
+        "name": "江苏红豆实业股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_actual_controller/71D5654944ADEE991715A1D521C684C3",
+        "_from": "Person/71D5654944ADEE991715A1D521C684C3",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "attr": "actual_control"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/71D5654944ADEE991715A1D521C684C3",
+        "name": "王宁"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

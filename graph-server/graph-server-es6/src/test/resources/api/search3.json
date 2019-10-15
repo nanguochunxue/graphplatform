@@ -1,0 +1,33 @@
+{
+  "filter": {
+    "logicOperator": "AND",
+    "rules": [
+      {
+        "schema": "Company",
+        "field": "name",
+        "schemaType": "VERTEX",
+        "boost": 1,
+        "fieldType": "STRING",
+        "value": "山鹰国际",
+        "operator": "MATCH"
+      },
+      {
+        "schema": "Company",
+        "field": "reg_capital",
+        "schemaType": "VERTEX",
+        "boost": 1,
+        "fieldType": "DOUBLE",
+        "value": 1567040000,
+        "operator": "EQ"
+      }
+    ]
+  },
+  "graph": "gap_fi_test",
+  "highlight": false,
+  "pageNo": 0,
+  "pageSize": 10,
+  "query": [],
+  "schemas": [
+    "Company"
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_officer/PO3FL54944ADEE991715A1D521C68332",
+        "_from": "Person/09KFL54944ADEE991715A1D521C68334",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "position": "首席执行官"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/09KFL54944ADEE991715A1D521C68334",
+        "name": "刘连红"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_officer/JFK3L54944ADEE991715A1D521C68308",
+        "_from": "Person/L3KFL54944A834757515A1D521C6854F",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "position": "总经理"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/L3KFL54944A834757515A1D521C6854F",
+        "name": "梁力军"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 3000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+{
+    "graph":"demo_graph",
+    "header":{
+        "options":{
+            "taskInstanceId":4,
+            "taskId":4
+        },
+        "type":"API"
+    },
+    "headerOptions":{"$ref":"$.header.options"},
+    "operation":"CREATE_OR_UPDATE",
+    "rows":[
+        {
+            "object_key":"DkBRcWIO",
+            "company_name":"iyllZcaTvRhFEVn"
+        },
+        {
+            "object_key":"sSAWophz",
+            "company_name":"eyhhXxhSmDpbNAh"
+        }
+    ],
+    "rowsSize":2,
+    "schema":"test_mei"
+}

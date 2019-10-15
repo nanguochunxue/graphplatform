@@ -1,0 +1,9 @@
+demo_graph
+POST /_search
+{
+     "from":0,
+     "size":30,
+     "query": {
+         "match_all": {}
+     }
+ }

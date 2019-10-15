@@ -1,0 +1,22 @@
+{
+    "graph": "gap_test_db",
+    "header": {
+        "options": {},
+        "type": "API"
+    },
+    "operation": "CREATE_OR_UPDATE",
+    "rows": [
+        {
+            "_from": "Company/81dcf84eea186e9c04c18b35bcf13bf6",
+            "_to": "Company/ed5cf39b0e708cfbe39ec8ea58a42e60",
+            "_key": "202CB962AC59075B964B07152D234B70",
+            "object_key": "202CB962AC59075B964B07152D234B70",
+            "ctime": "2010-07-27 11:33:00",
+            "utime": "2010-07-27 11:33:00",
+            "transfer_amount": "80000000",
+            "transfer_amount_unit": "元",
+            "shareholder_type": "公司股东"
+        }
+    ],
+    "schema": "transfer"
+}

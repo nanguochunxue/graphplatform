@@ -1,0 +1,135 @@
+{
+    "graph": "crm_dev2",
+    "schemas": {
+        "tv_tag_event": [
+            "a806051d0eda4bc487d3e0f0aecf692a",
+            "a806051d0eda4bc487d3e0f0aecf692a"
+        ],
+        "tv_achievement_sum_loan_bal": [
+            "CC3FL54944ADEE9XXX15A1D521C68514",
+            "CC3FL54944ADEE9XXX15A1D521C68517",
+            "CC3FL54944ADEE9XXX15A1D521C68306"
+        ]
+    },
+    "keyword": "刘铁柱",
+    "pageNo": 0,
+    "pageSize": 10,
+    "option": {
+        "log.enabled": true
+    },
+    "debugEnabled": true,
+    "query": [
+        {
+            "schema": "tv_tag_event",
+            "schemaType": "vertex",
+            "field": "top_mger_name",
+            "operator": "MATCH",
+            "boost": 3.0
+        },
+        {
+            "schema": "tv_achievement_sum_loan_bal",
+            "schemaType": "vertex",
+            "field": "top_mger_name",
+            "operator": "MATCH",
+            "boost": 1.0
+        }
+    ],
+    "filter": {
+        "logicOperator": "AND",
+        "rules": [
+            {
+                "schema": "tv_achievement_sum_loan_bal",
+                "schemaType": "vertex",
+                "field": "branch_name",
+                "fieldType": "string",
+                "operator": "EQ",
+                "value": "青岛银行潍坊分行"
+            },
+            {
+                "logicOperator": "OR",
+                "rules": [
+                    {
+                        "schema": "tv_achievement_sum_loan_bal",
+                        "schemaType": "VERTEX",
+                        "field": "branch_top_mger_name",
+                        "fieldType": "STRING",
+                        "operator": "IN",
+                        "value": [
+                            "石晓燕"
+                        ]
+                    },
+                    {
+                        "schema": "tv_achievement_sum_loan_bal",
+                        "schemaType": "EDGE",
+                        "field": "mger_amt_in_bank",
+                        "fieldType": "DOUBLE",
+                        "operator": "RANGE",
+                        "value": {
+                            "from": 400,
+                            "to": null,
+                            "include_lower": true,
+                            "include_upper": true
+                        }
+                    },
+                    {
+                        "schema": "tv_achievement_sum_loan_bal",
+                        "schemaType": "EDGE",
+                        "field": "mger_amt_in_branch",
+                        "fieldType": "500",
+                        "operator": "NOT_RANGE",
+                        "value": {
+                            "from": 6800000,
+                            "to": null,
+                            "include_lower": true,
+                            "include_upper": true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "aggregation": [
+        {
+            "key": "amount",
+            "field": "amount",
+            "type": "term",
+            "size": 30
+        },
+        {
+            "key": "amount_stats",
+            "field": "amount",
+            "type": "term",
+            "stats": "stats"
+        },
+        {
+            "key": "amount_min",
+            "field": "amount",
+            "type": "term",
+            "stats": "min"
+        },
+        {
+            "key": "amount_max",
+            "field": "amount",
+            "type": "term",
+            "stats": "max"
+        },
+        {
+            "key": "amount_avg",
+            "field": "amount",
+            "type": "term",
+            "stats": "avg"
+        },
+        {
+            "key": "amount_sum",
+            "field": "amount",
+            "type": "term",
+            "stats": "sum"
+        }
+    ],
+    "sort": [
+        {
+            "field": "openTime",
+            "order": "DESC"
+        }
+    ]
+}

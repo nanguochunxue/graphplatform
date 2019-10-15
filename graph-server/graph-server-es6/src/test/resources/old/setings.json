@@ -1,0 +1,32 @@
+{
+    "settings": {
+        "number_of_shards": 5,
+        "number_of_replicas": 1,
+        "analysis": {
+            "analyzer": {
+                "ik": {
+                    "tokenizer": "normalizer",
+                    "type": "custom"
+                }
+            },
+            "normalizer": {
+                "my_normalizer": {
+                    "type": "custom",
+                    "char_filter": [],
+                    "filter": [
+                        "asciifolding",
+                        "lowercase"
+                    ]
+                }
+            },
+            "tokenizer": {
+                "normalizer": {
+                    "type": "ngram",
+                    "min_gram": 2,
+                    "max_gram": 2,
+                    "token_chars": "letter, digit"
+                }
+            }
+        }
+    }
+}

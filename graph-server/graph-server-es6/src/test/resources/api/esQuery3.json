@@ -1,0 +1,27 @@
+{
+    "debug": false,
+    "filter": {
+        "logicOperator": "OR",
+        "rules": [
+            {
+                "schema": "tv_company",
+                "field": "urn",
+                "schemaType": "VERTEX",
+                "boost": 1.0,
+                "fieldType": "STRING",
+                "value": "和规范化个",
+                "operator": "MATCH"
+            }
+        ]
+    },
+    "graph": "tl_dev",
+    "highlight": false,
+    "internalOption": {},
+    "pageNo": 0,
+    "pageSize": 10,
+    "query": [],
+    "schemas": [
+        "tv_company"
+    ],
+    "timeout": 15
+}

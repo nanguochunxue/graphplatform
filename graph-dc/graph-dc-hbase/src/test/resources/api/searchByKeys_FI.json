@@ -1,0 +1,10 @@
+{
+    "debug": true,
+    "graph": "demo_graph",
+    "internalOption": {},
+    "schemas": {
+        "demo_vertex": [
+            "004DBCF5FDFEA6C5F98F1140EE00FE6F"
+        ]
+    }
+}

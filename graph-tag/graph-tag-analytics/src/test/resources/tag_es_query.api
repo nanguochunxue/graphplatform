@@ -1,0 +1,13 @@
+{
+  "graph": "crm_dev.tag",
+  "schemas": ["tag_value"],
+  "pageNo": 1,
+  "pageSize": 500,
+  "filter": [
+    {
+      "field": "objectKey",
+      "type": "term",
+      "values": ["9c925836a74105c80b60ac88b906f6c0"]
+    }
+  ]
+}

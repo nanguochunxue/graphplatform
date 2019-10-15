@@ -1,0 +1,5 @@
+{
+    "graph": "demo_graph",
+    "requestMethod": "GET",
+    "uri": "/gap_fi_test.company/_mappings"
+}

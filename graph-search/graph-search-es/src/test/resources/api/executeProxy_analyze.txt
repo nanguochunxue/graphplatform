@@ -1,0 +1,6 @@
+gap_fi_test
+POST /gap_fi_test.company/_analyze
+{
+	"field":"name",
+	"text":"无锡威孚高科技集团股份有限公司"
+}

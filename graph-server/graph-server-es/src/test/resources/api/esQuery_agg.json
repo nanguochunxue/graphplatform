@@ -1,0 +1,60 @@
+{
+    "graph": "demo_graph.demo_vertex",
+    "schemas": [
+        "demo_vertex"
+    ],
+    "pageNo": 0,
+    "pageSize": 10,
+    "option": {
+        "log.enabled": true
+    },
+    "debugEnabled": true,
+    "aggregation": [
+        {
+            "key": "agg1_term",
+            "field": "demo_string_field",
+            "type": "term",
+            "stats": "count",
+            "size": 30
+        },
+        {
+            "key": "agg2_term",
+            "field": "demo_long_field",
+            "type": "term",
+            "stats": "stats"
+        },
+        {
+            "key": "agg3_term",
+            "field": "demo_long_field",
+            "type": "term",
+            "stats": "min"
+        },
+        {
+            "key": "agg4_term",
+            "field": "demo_long_field",
+            "type": "term",
+            "stats": "max"
+        },
+        {
+            "key": "agg5_term",
+            "field": "demo_long_field",
+            "type": "term",
+            "stats": "avg"
+        },
+        {
+            "key": "agg6_range",
+            "field": "demo_long_field",
+            "type": "range",
+            "ranges": [
+                {
+                    "from": 1,
+                    "to": 20
+                },
+                {
+                    "from": 20,
+                    "to": 30
+                }
+            ]
+        }
+    ]
+}

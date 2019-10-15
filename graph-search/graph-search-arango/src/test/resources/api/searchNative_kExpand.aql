@@ -1,0 +1,7 @@
+WITH Company,Person
+FOR start IN ['Company/7908891a00d02b29354c4dd5147de439']
+FOR v,e,p IN 1..1
+ANY start
+te_guarantee,te_invest,te_officer,te_transfer
+options {bfs:true,uniqueVertices:'path'}
+RETURN p

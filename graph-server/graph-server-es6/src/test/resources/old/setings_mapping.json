@@ -1,0 +1,86 @@
+{
+    "settings": {
+        "number_of_shards":1,
+        "number_of_replicas": 0,
+        "analysis": {
+            "analyzer": {
+                "ik": {
+                    "tokenizer": "normalizer",
+                    "type": "custom"
+                }
+            },
+            "normalizer": {
+                "my_normalizer": {
+                    "type": "custom",
+                    "char_filter": [],
+                    "filter": [
+                        "asciifolding",
+                        "lowercase"
+                    ]
+                }
+            },
+            "tokenizer": {
+                "normalizer": {
+                    "type": "ngram",
+                    "min_gram": 2,
+                    "max_gram": 2,
+                    "token_chars": "letter, digit"
+                }
+            }
+        }
+    },
+    "mappings": {
+        "company": {
+            "_all": {
+                "enabled": false
+            },
+            "date_detection": true,
+            "dynamic_date_formats": [
+                "yyyy-MM-dd HH:mm:ss",
+                "yyyy-MM-dd"
+            ],
+            "dynamic_templates": [
+                {
+                    "strings": {
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "text",
+                            "analyzer": "ik",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "normalizer": "my_normalizer"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "properties": {
+                "id": {
+                    "type": "text"
+                },
+                "name": {
+                    "type": "text",
+                    "analyzer": "ik"
+                },
+                "reg_address": {
+                    "type": "text"
+                },
+                "reg_capital": {
+                    "type": "text",
+                    "analyzer": "ik"
+                },
+                "reg_date": {
+                    "type": "text"
+                },
+                "ctime": {
+                    "type": "text"
+                },
+                "utime": {
+                    "type": "text"
+                }
+            }
+        }
+    }
+}

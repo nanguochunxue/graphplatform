@@ -1,0 +1,10 @@
+{
+    "debug": true,
+    "graph": "gap_test_db",
+    "internalOption": {},
+    "schemas": {
+        "invest": [
+            "TTXJ94944ADEE991715A1D521C6DFL03"
+        ]
+    }
+}

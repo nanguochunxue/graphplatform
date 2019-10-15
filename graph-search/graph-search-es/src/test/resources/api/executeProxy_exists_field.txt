@@ -1,0 +1,13 @@
+gap_fi_test
+POST gap_fi_test.company/_search
+{
+    "query": {
+        "bool": {
+            "must": {
+                "exists": {
+                    "field": "error_log"
+                }
+            }
+        }
+    }
+}

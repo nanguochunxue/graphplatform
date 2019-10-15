@@ -1,0 +1,137 @@
+###########################################################################
+##DELETE index
+###########################################################################
+DELETE /es_index
+GET es_index/_mapping
+###########################################################################
+##Post mapping
+###########################################################################
+PUT /es_index
+{
+  "aliases": {
+    "es_index_alias": {}
+  },
+  "number_of_shards": 5,
+  "number_of_replicas": 1,
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "ik": {
+          "type": "custom",
+          "tokenizer": "ik_max_word"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "es_index_foo": {
+      "dynamic_templates": [
+        {
+          "strings": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "text",
+              "analyzer":"ik",
+              "fields": {
+                "raw": {
+                  "type":  "keyword"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "_all": {
+        "enabled": false
+      }
+    }
+  }
+}
+
+###
+number_of_shards  默认5
+number_of_replicas 默认1
+
+###########################################################################
+##Post bulk data
+###########################################################################
+POST /es_index/es_index_foo/_bulk
+{"index": {"_id": "1"}}
+{"string": "王天宇", "integer": 123, "long": 12345678912345, "float": 123.456, "date": "2018-01-10 11:32:48","array_objects": [{"name": "age", "value": 18}], "array_strings": ["11", "22"]}
+{"index": {"_id": "2"}}
+{"string": "王天宇", "integer": 234, "long": 12345678912345, "float": 123.456, "date": "2018-01-10 11:32:48","array_objects": [{"name": "age", "value": 18}], "array_strings": ["22"]}
+
+
+###########################################################################
+##Updat scripts
+###########################################################################
+"lang": "painless" 默认
+Groovy Scripting Language Deprecated in 5.0.0
+
+## 添加一个新字段
+POST /es_index/es_index_foo/1/_update
+{
+    "script" : "ctx._source.new_field = \"value_of_new_field\""
+}
+
+## 删除一个字段
+POST /es_index/es_index_foo/1/_update
+{
+    "script" : "ctx._source.remove(\"new_field\")"
+}
+
+## +=、=、-=
+POST /es_index/es_index_foo/1/_update
+{
+    "script" : {
+        "inline": "ctx._source.integer += params.count",
+        "lang": "painless",
+        "params" : {
+            "count" : 4
+        }
+    }
+}
+
+## array_strings的值添加33 ["11", "22"] -> ["11", "22"，"33"]
+POST /es_index/es_index_foo/1/_update
+{
+    "script" : {
+        "inline": "ctx._source.array_strings.add(params.tag)",
+        "lang": "painless",
+        "params" : {
+            "tag" : "33"
+        }
+    }
+}
+## array_strings的值更新为[11,22,33]
+POST /es_index/es_index_foo/1/_update
+{
+    "script" : {
+        "inline": "ctx._source.array_strings = params.tag",
+        "lang": "painless",
+        "params" : {
+            "tag" : [11,22,33]
+        }
+    }
+}
+## 如果array_strings包含11，删除该文档
+POST /es_index/es_index_foo/1/_update
+{
+    "script" : {
+        "inline": "if (ctx._source.array_strings.contains(params.tag)) { ctx.op = \"delete\" } else { ctx.op = \"none\" }",
+        "lang": "painless",
+        "params" : {
+            "tag" : 11
+        }
+    }
+}
+
+###########################################################################
+##Query
+###########################################################################
+POST /es_search/_search
+{
+   "query": {
+      "match_all": {}
+   }
+}

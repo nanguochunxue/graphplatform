@@ -1,0 +1,59 @@
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": [{
+                "bool": {
+                    "should": [{
+                        "bool": {
+                            "must": [{
+                                "match_phrase": {
+                                    "object_key": {
+                                        "query": "银行"
+                                    }
+                                }
+                            }],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                        }
+                    },
+                        {
+                            "bool": {
+                                "must": [{
+                                    "match_phrase": {
+                                        "demo_string_field": {
+                                            "query": "银行"
+                                        }
+                                    }
+                                }],
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        },
+                        {
+                            "bool": {
+                                "must": [{
+                                    "match_phrase": {
+                                        "name": {
+                                            "query": "银行"
+                                        }
+                                    }
+                                }],
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        }],
+                    "adjust_pure_negative": true,
+                    "boost": 1.0
+                }
+            }],
+            "adjust_pure_negative": true,
+            "boost": 1.0
+        }
+    },
+    "_source": {
+        "includes": [],
+        "excludes": []
+    }
+}

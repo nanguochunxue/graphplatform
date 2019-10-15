@@ -1,0 +1,17 @@
+{
+    "graph":"crm_dev2",
+    "schemaKeys": {
+        "tv_tag_event": [
+            "a806051d0eda4bc487d3e0f0aecf692a",
+            "a806051d0eda4bc487d3e0f0aecf692a"
+        ],
+        "tv_achievement_sum_loan_bal": [
+            "CC3FL54944ADEE9XXX15A1D521C68514",
+            "CC3FL54944ADEE9XXX15A1D521C68517",
+            "CC3FL54944ADEE9XXX15A1D521C68306"
+        ]
+    },
+    "internalOption":{
+        "version":"ES"
+    }
+}

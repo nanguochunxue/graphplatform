@@ -1,0 +1,83 @@
+{
+    "graph": "demo_graph1",
+    "keyword": "华为网络公司",
+    "schemas": ["demo_vertex"],
+    "pageNo": 0,
+    "pageSize": 10,
+    "query": [
+        {
+            "schema": "demo_vertex",
+            "schemaType": "vertex",
+            "field": "demo_string_field",
+            "operator": "MATCH",
+            "boost": 3.0
+        },
+        {
+            "schema": "demo_vertex",
+            "schemaType": "vertex",
+            "field": "demo_string_field2",
+            "operator": "MATCH",
+            "boost": 1.0
+        }
+    ],
+    "filter": {
+        "logicOperator": "AND",
+        "rules": [
+            {
+                "schema": "demo_vertex",
+                "schemaType": "vertex",
+                "field": "demo_string_field3.keyword",
+                "fieldType": "STRING",
+                "operator": "IN",
+                "value": ["北京"],
+                "logicOperator": "AND",
+                "rules": []
+            },
+            {
+                "logicOperator": "OR",
+                "rules": [
+                    {
+                        "schema": "demo_vertex",
+                        "schemaType": "VERTEX",
+                        "field": "demo_long_field",
+                        "fieldType": "LONG",
+                        "operator": "EQ",
+                        "value": 100
+                    },
+                    {
+                        "schema": "demo_vertex",
+                        "schemaType": "EDGE",
+                        "field": "demo_double_field",
+                        "fieldType": "DOUBLE",
+                        "operator": "RANGE",
+                        "value": {
+                            "from": 100,
+                            "to": 200,
+                            "includeLower": true,
+                            "includeLower": true
+                        }
+                    },
+                    {
+                        "schema": "demo_vertex",
+                        "schemaType": "EDGE",
+                        "field": "demo_date_field.keyword",
+                        "fieldType": "STRING",
+                        "operator": "NOT_RANGE",
+                        "value": {
+                            "from": "2019-05-21",
+                            "to": null,
+                            "includeLower": true,
+                            "includeUpper": true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "sort": [
+        {
+            "field": "demo_long_field",
+            "order": "DESC"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+POST /ddd/_search
+ {
+     "query": {
+         "term": {
+         	"long_field": 7001245
+         }
+     }
+ }

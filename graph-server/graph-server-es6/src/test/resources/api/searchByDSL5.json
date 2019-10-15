@@ -1,0 +1,59 @@
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": [{
+                "bool": {
+                    "should": [{
+                        "bool": {
+                            "must": [{
+                                "match": {
+                                    "object_key": {
+                                        "query": "hai"
+                                    }
+                                }
+                            }],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                        }
+                    },
+                        {
+                            "bool": {
+                                "must": [{
+                                    "match": {
+                                        "name": {
+                                            "query": "hai"
+                                        }
+                                    }
+                                }],
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        },
+                        {
+                            "bool": {
+                                "must": [{
+                                    "match": {
+                                        "reg_address": {
+                                            "query": "hai"
+                                        }
+                                    }
+                                }],
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        }],
+                    "adjust_pure_negative": true,
+                    "boost": 1.0
+                }
+            }],
+            "adjust_pure_negative": true,
+            "boost": 1.0
+        }
+    },
+    "_source": {
+        "includes": [],
+        "excludes": []
+    }
+}

@@ -1,0 +1,132 @@
+{
+    "graph": "gap_ccb",
+    "schemas": [
+        "Company"
+    ],
+    "keyword": "中国人寿",
+    "pageNo": 1,
+    "pageSize": 10,
+    "option": {
+        "log.enabled": true
+    },
+    "query": [
+        {
+            "schema": "Company",
+            "schemaType": "vertex",
+            "field": "name",
+            "operator": "MATCH",
+            "boost": 3.0
+        },
+        {
+            "schema": "Person",
+            "schemaType": "vertex",
+            "field": "name",
+            "operator": "MATCH",
+            "boost": 1.0
+        }
+    ],
+    "filter": {
+        "logicOperator": "AND",
+        "rules": [
+            {
+                "schema": "Company",
+                "schemaType": "vertex",
+                "field": "reg_city",
+                "fieldType": "reg_city",
+                "operator": "EQ",
+                "value": "北京",
+                "logicOperator": "AND",
+                "rules": []
+            },
+            {
+                "logicOperator": "OR",
+                "rules": [
+                    {
+                        "schema": "Company",
+                        "schemaType": "VERTEX",
+                        "field": "reg_city",
+                        "fieldType": "STRING",
+                        "operator": "IN",
+                        "value": [
+                            "龙岩"
+                        ]
+                    },
+                    {
+                        "schema": "te_guarantee",
+                        "schemaType": "EDGE",
+                        "field": "guarantee_amount",
+                        "fieldType": "DOUBLE",
+                        "operator": "RANGE",
+                        "value": [
+                            {
+                                "from": 6800000,
+                                "to": null,
+                                "include_lower": true,
+                                "include_upper": true
+                            }
+                        ]
+                    },
+                    {
+                        "schema": "te_guarantee",
+                        "schemaType": "EDGE",
+                        "field": "guarantee_amount",
+                        "fieldType": "DOUBLE",
+                        "operator": "NOT_RANGE",
+                        "value": [
+                            {
+                                "from": 6800000,
+                                "to": null,
+                                "include_lower": true,
+                                "include_upper": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "aggregation": [
+        {
+            "key": "amount",
+            "field": "amount",
+            "type": "term",
+            "size": 30
+        },
+        {
+            "key": "amount_stats",
+            "field": "amount",
+            "type": "term",
+            "stats": "stats"
+        },
+        {
+            "key": "amount_min",
+            "field": "amount",
+            "type": "term",
+            "stats": "min"
+        },
+        {
+            "key": "amount_max",
+            "field": "amount",
+            "type": "term",
+            "stats": "max"
+        },
+        {
+            "key": "amount_avg",
+            "field": "amount",
+            "type": "term",
+            "stats": "avg"
+        },
+        {
+            "key": "amount_sum",
+            "field": "amount",
+            "type": "term",
+            "stats": "sum"
+        }
+    ],
+    "sort": [
+        {
+            "field": "openTime",
+            "order": "DESC"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "_from": "Company/74DFB7AAAC745B53E4D921A112CDAB46",
+        "_id": "guarantee/507485544",
+        "_key": "507485544",
+        "_rev": "1456871821",
+        "_to": "Company/DCF3F5B4D4D4461412E9C8E88FFA9421",
+        "begin_date": "2015-06-01",
+        "currency": "人民币",
+        "end_date": "2017-06-01",
+        "type": "020",
+        "value": 100
+    },
+    {
+        "_from": "Company/74DFB7AAAC745B53E4D921A112111111",
+        "_to": "Company/DCF3F5B4D4D4461412E9C8E88222222",
+        "begin_date": "2014-06-01",
+        "currency": "人民币",
+        "end_date": "2014-12-15",
+        "type": "020",
+        "value": "100"
+    }
+]

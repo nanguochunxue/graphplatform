@@ -1,0 +1,6 @@
+{
+    "graph": "demo_graph",
+    "requestMethod":"POST",
+    "uri": "/_search",
+    "content":    "{ \"query\": {\"match_all\": {}}}"
+}

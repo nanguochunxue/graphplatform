@@ -1,0 +1,20 @@
+{
+    "graph": "test",
+    "type": "K_EXPAND",
+    "startVertices": [
+        "Company/7908891a00d02b29354c4dd5147de439"
+    ],
+    "vertexTables": [
+        "Company",
+        "Person"
+    ],
+    "edgeTables": [
+        "te_guarantee",
+        "te_invest",
+        "te_officer",
+        "te_transfer"
+    ],
+    "direction": "ANY",
+    "maxDepth": 3,
+    "maxSize": 5
+}

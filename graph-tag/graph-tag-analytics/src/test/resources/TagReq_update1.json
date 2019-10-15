@@ -1,0 +1,52 @@
+{
+  "graph": "crm_dev2",
+  "tagId": 1000000010,
+  "tagCategoryId": 701,
+  "tagName": "测试标签1",
+  "tagDesc": "测试标签111",
+  "tagGroup": "SYSTEM",
+  "originalRule":{
+    "expression":"",
+    "logicOperators":[
+      "AND"
+    ],
+    "rules":[
+      {
+        "expression":"",
+        "logicOperators":[
+          "AND"
+        ],
+        "rules":[
+          {
+            "expression":"",
+            "logicOperators":[
+              "AND"
+            ],
+            "rules":[
+              {
+                "expression":"@tag(70100101.value.count$1$) = 2112",
+                "logicOperators":[],
+                "rules":[]
+              },
+              {
+                "expression":"@tag(70200101.value.count$1$) = 2",
+                "logicOperators":[],
+                "rules":[]
+              }
+            ]
+          },
+          {
+            "expression":"@tag(70100101.value.count$1$) = 11",
+            "logicOperators":[],
+            "rules":[]
+          }
+        ]
+      },
+      {
+        "expression":"@tag(70100101.value.count$1$) = 1",
+        "logicOperators":[],
+        "rules":[]
+      }
+    ]
+  }
+}

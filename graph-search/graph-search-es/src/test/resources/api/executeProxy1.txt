@@ -1,0 +1,11 @@
+demo_graph
+POST /demo_graph/_search
+{
+    "from":0,
+    "size":30,
+    "query": {
+        "term": {
+        	"name.keyword":"P6v8"
+        }
+    }
+}

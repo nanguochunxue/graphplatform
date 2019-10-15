@@ -1,0 +1,18 @@
+{
+    "graph": "demo_graph",
+    "schemas": [
+        "demo_vertex"
+    ],
+    "pageNo": 0,
+    "pageSize": 10,
+    "option": {
+        "log.enabled": true
+    },
+    "debugEnabled": true,
+    "sort": [
+        {
+            "field": "demo_long_field",
+            "order": "DESC"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+gap_fi_test
+POST /gap_fi_test.company/_doc/_delete_by_query
+{
+     "query": {
+         "bool": {
+             "must": {
+                 "exists": {
+                     "field": "error_log"
+                 }
+             }
+         }
+     }
+ }

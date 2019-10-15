@@ -1,0 +1,12 @@
+{
+    "graph":"demo_graph",
+    "schemas": {
+        "demo_vertex": [
+            "1",
+            "2"
+        ]
+    },
+    "internalOption":{
+        "version":"ES"
+    }
+}

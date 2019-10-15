@@ -1,0 +1,34 @@
+{
+    "filter": {},
+    "graph": "sz_haizhi_test",
+    "highlight": false,
+    "keyword": "公司",
+    "pageNo": 0,
+    "pageSize": 10,
+    "query": [
+        {
+            "schema": "Company",
+            "schemaType": "VERTEX",
+            "boost": 3.0,
+            "field": "object_key",
+            "operator": "MATCH"
+        },
+        {
+            "schema": "Company",
+            "schemaType": "VERTEX",
+            "boost": 3.0,
+            "field": "name",
+            "operator": "MATCH"
+        },
+        {
+            "schema": "Company",
+            "schemaType": "VERTEX",
+            "boost": 3.0,
+            "field": "reg_capital",
+            "operator": "MATCH"
+        }
+    ],
+    "schemas": [
+        "Company"
+    ]
+}

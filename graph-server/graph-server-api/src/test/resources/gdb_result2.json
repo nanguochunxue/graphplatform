@@ -1,0 +1,50 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "invest/e-v1-v21",
+        "_from": "Company/v1",
+        "_to": "Person/v21"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v21"
+      },{
+        "_id": "Company/v1"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "invest/e-v21-v1",
+        "_from": "Person/v21",
+        "_to": "Company/v1"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v21"
+      },{
+        "_id": "Company/v1"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "invest/e-v31-v1",
+        "_from": "Company/v31",
+        "_to": "Company/v1"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/v31"
+      },{
+        "_id": "Company/v1"
+      }
+    ]
+  }
+]

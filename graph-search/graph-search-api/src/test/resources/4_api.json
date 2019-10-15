@@ -1,0 +1,42 @@
+{
+  "graph": "crm_dev2",
+  "startVertices": [
+    "Company/7908891a00d02b29354c4dd5147de439"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_guarantee"
+  ],
+  "direction": "ANY",
+  "maxDepth": 2,
+  "maxSize": 1000,
+  "resultType": "tree",
+  "rule": {
+    "te_guarantee": {
+      "label": "担保 @value(edgeScript)万",
+      "edgeScript": "sum(@field(te_guarantee.guarantee_amount))",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction",
+        "newVertices": {
+          "Company": {
+            "vertexTable": "Company",
+            "fromVertexLabel": "担保企业",
+            "toVertexLabel": "对外担保企业"
+          },
+          "Person": {
+            "vertexTable": "Person",
+            "fromVertexLabel": "担保自然人",
+            "toVertexLabel": "对外担保自然人"
+          }
+        }
+      }
+    },
+    "Company": {
+      "label": "@field(Company.name)"
+    },
+    "Person": {
+      "label": "@field(Person.name)"
+    }
+  }
+}

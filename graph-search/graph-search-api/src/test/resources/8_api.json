@@ -1,0 +1,60 @@
+{
+  "graph": "crm_dev2",
+  "startVertices": [
+    "Company/7908891a00d02b29354c4dd5147de439"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_invest",
+    "te_officer",
+    "te_guarantee",
+    "te_transfer",
+    "te_concert",
+    "te_actual_controller"
+  ],
+  "direction": "ANY",
+  "maxDepth": 2,
+  "maxSize": 1000,
+  "resultType": "default",
+  "rule": {
+    "te_invest": {
+      "label": "@value(edgeScript)",
+      "edgeScript": "percent(sum(@field(te_invest.invest_amount))/@field(Company.reg_capital))",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction"
+      }
+    },
+    "te_officer": {
+      "label": "@field(te_officer.position)"
+    },
+    "te_guarantee": {
+      "label": "担保 @value(edgeScript)万",
+      "edgeScript": "sum(@field(te_guarantee.guarantee_amount))",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction"
+      }
+    },
+    "te_transfer": {
+      "label": "转账 @value(edgeScript)万",
+      "edgeScript": "sum(@field(te_transfer.transfer_amount))",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction"
+      }
+    },
+    "te_concert": {
+      "label": "一致行动关系"
+    },
+    "te_actual_controller": {
+      "label": "实际控制人"
+    },
+    "Company": {
+      "label": "@field(Company.name)"
+    },
+    "Person": {
+      "label": "@field(Person.name)"
+    }
+  }
+}

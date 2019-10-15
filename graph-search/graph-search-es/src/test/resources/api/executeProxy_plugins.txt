@@ -1,0 +1,2 @@
+demo_graph
+GET /_cat/plugins?v

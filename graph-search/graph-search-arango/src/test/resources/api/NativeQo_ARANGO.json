@@ -1,0 +1,10 @@
+{
+    "graph": "test",
+    "query": "WITH Company, te_invest, Person\r\nFOR start IN [@name]\r\nFOR v,e,p IN 1..2\r\nANY start\r\nte_invest\r\noptions {bfs:true,uniqueVertices:'path'}\r\n\r\nFILTER LAST(p.vertices)._id IN ['Company/ed5cf39b0e708cfbe39ec8ea58a42e60']\r\nLET newEdges=p.edges[\r\n* FILTER true AND (\r\n\t(\r\n\t\t(\r\n\t\t\t(\r\n\t\t\t\tCURRENT._from in ['Company/81dcf84eea186e9c04c18b35bcf13bf6','Company/ed5cf39b0e708cfbe39ec8ea58a42e60'] OR (\r\n\t\t\t\t\t!IS_SAME_COLLECTION(\r\n\t\t\t\t\t\t'Company', CURRENT._from\r\n\t\t\t\t\t) OR (\r\n\t\t\t\t\t\tIS_SAME_COLLECTION(\r\n\t\t\t\t\t\t\t'Company', CURRENT._from\r\n\t\t\t\t\t\t) AND true and (\r\n\t\t\t\t\t\t\tDOCUMENT(\r\n\t\t\t\t\t\t\t\tCURRENT._from\r\n\t\t\t\t\t\t\t).reg_city!='大连'\r\n\t\t\t\t\t\t)\r\n\t\t\t\t\t)\r\n\t\t\t\t)\r\n\t\t\t)\r\n\t\t)\r\n\t)\r\n\tand\r\n\t(\r\n\t\t(\r\n\t\t\t(\r\n\t\t\t\tCURRENT._to in ['Company/81dcf84eea186e9c04c18b35bcf13bf6','Company/ed5cf39b0e708cfbe39ec8ea58a42e60'] OR (\r\n\t\t\t\t\t!IS_SAME_COLLECTION(\r\n\t\t\t\t\t\t'Company', CURRENT._to\r\n\t\t\t\t\t) OR (\r\n\t\t\t\t\t\tIS_SAME_COLLECTION(\r\n\t\t\t\t\t\t\t'Company', CURRENT._to\r\n\t\t\t\t\t\t) AND true and (\r\n\t\t\t\t\t\t\tDOCUMENT(\r\n\t\t\t\t\t\t\t\tCURRENT._to\r\n\t\t\t\t\t\t\t).reg_city!='大连'\r\n\t\t\t\t\t\t)\r\n\t\t\t\t\t)\r\n\t\t\t\t)\r\n\t\t\t)\r\n\t\t)\r\n\t)\r\n) AND IS_SAME_COLLECTION('te_invest', CURRENT._id) AND ((SUBSTRING(CURRENT._from, 0, FIND_FIRST(CURRENT._from, '/')) IN ['', 'Company', 'te_invest', 'Person']) or (CURRENT._from in ['Company/81dcf84eea186e9c04c18b35bcf13bf6','Company/ed5cf39b0e708cfbe39ec8ea58a42e60']))  AND ((SUBSTRING(CURRENT._to, 0, FIND_FIRST(CURRENT._to, '/')) IN ['', 'Company', 'te_invest', 'Person']) or (CURRENT._to in ['Company/81dcf84eea186e9c04c18b35bcf13bf6','Company/ed5cf39b0e708cfbe39ec8ea58a42e60'])) \r\nreturn CURRENT\r\n]\r\n\r\nFILTER LENGTH(newEdges) > 0 AND LENGTH(newEdges) == LENGTH(p.edges)\r\nLIMIT 0, 500\r\n\r\nRETURN p",
+    "parameters": {
+        "name": "Company/81dcf84eea186e9c04c18b35bcf13bf6"
+    },
+    "options": {
+        "profile": true
+    }
+}

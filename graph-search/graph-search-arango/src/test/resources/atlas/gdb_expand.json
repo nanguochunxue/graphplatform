@@ -1,0 +1,24 @@
+{
+  "graph": "crm_dev2",
+  "startVertices": [
+    "Company/36d37c063ee31a5aebcc3667af028715"
+  ],
+  "endVertices": [],
+  "edgeTables": [
+    "te_invest"
+  ],
+  "direction": "OUTBOUND|INBOUND",
+  "maxDepth": 2,
+  "resultType": "tree",
+  "rule": {
+    "te_invest": {
+      "edge": "te_invest",
+      "edgeLabel": "@{edgeScript}",
+      "edgeScript": "percent(sum(@field(invest.shareholding_ratio)/@field(Company.reg_amount))",
+      "edgeOrder": "desc",
+      "aggregation": {
+        "type": "direction"
+      }
+    }
+  }
+}

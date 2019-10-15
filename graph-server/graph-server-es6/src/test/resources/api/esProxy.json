@@ -1,0 +1,6 @@
+{
+    "graph": "demo_graph",
+    "requestMethod":"POST",
+    "uri": "/_search",
+    "content":    "{ \"query\": {\"term\": {\"demo_long_field\":\"5696\"}}}"
+}

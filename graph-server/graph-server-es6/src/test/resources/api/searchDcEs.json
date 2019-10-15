@@ -1,0 +1,16 @@
+{
+    "graph": "demo_graph.demo_vertex",
+    "keyword": "ui",
+    "pageNo": 0,
+    "pageSize": 10,
+    "option": {
+        "log.enabled": true
+    },
+    "debugEnabled": true,
+    "sort": [
+        {
+            "field": "openTime",
+            "order": "DESC"
+        }
+    ]
+}

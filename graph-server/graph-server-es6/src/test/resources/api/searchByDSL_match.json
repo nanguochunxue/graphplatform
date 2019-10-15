@@ -1,0 +1,59 @@
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": [{
+                "bool": {
+                    "should": [{
+                        "bool": {
+                            "must": [{
+                                "match": {
+                                    "object_key": {
+                                        "query": "公司"
+                                    }
+                                }
+                            }],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                        }
+                    },
+                        {
+                            "bool": {
+                                "must": [{
+                                    "match": {
+                                        "demo_string_field": {
+                                            "query": "公司"
+                                        }
+                                    }
+                                }],
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        },
+                        {
+                            "bool": {
+                                "must": [{
+                                    "match": {
+                                        "demo_long_field": {
+                                            "query": "公司"
+                                        }
+                                    }
+                                }],
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        }],
+                    "adjust_pure_negative": true,
+                    "boost": 1.0
+                }
+            }],
+            "adjust_pure_negative": true,
+            "boost": 1.0
+        }
+    },
+    "_source": {
+        "includes": [],
+        "excludes": []
+    }
+}

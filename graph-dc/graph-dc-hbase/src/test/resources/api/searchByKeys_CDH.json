@@ -1,0 +1,18 @@
+{
+    "graph":"sz_haizhi_test",
+    "schemas": {
+        "te_invest": [
+            "JFK3L54944ADEE991715A1D521C68308",
+            "TTXJ94944ADEE991715A1D521C6DFL03",
+            "013D407166EC4FA56EB1E1F8CBE183B9"
+        ],
+        "te_transfer": [
+            "202CB962AC59075B964B07152D234B70",
+            "250CF8B51C773F3F8DC8B4BE867A9A02",
+            "289DFF07669D7A23DE0EF88D2F7129E7"
+        ]
+    },
+    "internalOption":{
+        "version":"HBase"
+    }
+}

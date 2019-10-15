@@ -1,0 +1,90 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "te_guarantee/DF3L54944ADEE991715A1D521C6903FF",
+        "_from": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "guarantee_amount": 100000000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/5870542fa61a997834c7d61b829fd1ba",
+        "name": "江河创建集团股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_guarantee/87JFL54944ADEE991715A1D521C6DFL0",
+        "_from": "Company/36d37c063ee31a5aebcc3667af028715",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "guarantee_amount": 200000000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Company/36d37c063ee31a5aebcc3667af028715",
+        "name": "江苏红豆实业股份有限公司"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致星图技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_guarantee/JFK3L54944ADEE991715A1D521C68308",
+        "_from": "Person/09KFL54944ADEE991715A1D521C68334",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "guarantee_amount": 150000000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/09KFL54944ADEE991715A1D521C68334",
+        "name": "刘连红"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "te_guarantee/JFK3L54944ADEE991715A1D521C68308",
+        "_from": "Person/L3KFL54944A834757515A1D521C6854F",
+        "_to": "Company/7908891a00d02b29354c4dd5147de439",
+        "guarantee_amount": 300000000,
+        "currency": "元"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/L3KFL54944A834757515A1D521C6854F",
+        "name": "梁力军"
+      },{
+        "_id": "Company/7908891a00d02b29354c4dd5147de439",
+        "name": "海致网络技术（北京）有限公司",
+        "reg_capital": 2000000000,
+        "reg_currency": "元"
+      }
+    ]
+  }
+]

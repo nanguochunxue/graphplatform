@@ -1,0 +1,10 @@
+{
+    "graph": "test",
+    "query": "MATCH (src:Person {name: $name}) MATCH (src)-[*..2]-(dst) RETURN src,dst",
+    "parameters": {
+        "name": "Kevin Bacon"
+    },
+    "options": {
+        "profile": true
+    }
+}

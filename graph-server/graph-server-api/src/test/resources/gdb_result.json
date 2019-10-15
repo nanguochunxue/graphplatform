@@ -1,0 +1,98 @@
+[
+  {
+    "edges": [
+      {
+        "_id": "Person/e-v1-v21",
+        "_from": "Person/v21",
+        "_to": "Company/v1"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v21"
+      },{
+        "_id": "Company/v1"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "e-v22-v321",
+        "_from": "Person/v22",
+        "_to": "Company/v321"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v22"
+      },{
+        "_id": "Company/v321"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "e-v1-v22",
+        "_from": "Person/v22",
+        "_to": "Company/v1"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v22"
+      },{
+        "_id": "Company/v1"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "e-v21-v311",
+        "_from": "Person/v21",
+        "_to": "Company/v311"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v21"
+      },{
+        "_id": "Company/v311"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "e-v21-v312",
+        "_from": "Person/v21",
+        "_to": "Company/v312"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v21"
+      },{
+        "_id": "Company/v312"
+      }
+    ]
+  },
+  {
+    "edges": [
+      {
+        "_id": "e-v21-v313",
+        "_from": "Person/v21",
+        "_to": "Company/v313"
+      }
+    ],
+    "vertices": [
+      {
+        "_id": "Person/v21"
+      },{
+        "_id": "Company/v313"
+      }
+    ]
+  }
+]

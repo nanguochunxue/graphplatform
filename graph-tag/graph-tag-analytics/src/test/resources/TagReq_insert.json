@@ -1,0 +1,25 @@
+{
+  "graph": "crm_dev2",
+  "tagCategoryId": 101,
+  "tagName": "测试标签1",
+  "tagDesc": "测试标签111",
+  "tagGroup": "SYSTEM",
+  "originalRule": {
+    "expression": "",
+    "logicOperators": [
+      "AND"
+    ],
+    "rules": [
+      {
+        "expression": "@tag(70100101.value.count$1$) > 3",
+        "logicOperators": [],
+        "rules": []
+      },
+      {
+        "expression": "@tag(70200101.value.count$1$) > 1",
+        "logicOperators": [],
+        "rules": []
+      }
+    ]
+  }
+}

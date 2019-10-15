@@ -1,0 +1,2 @@
+gap_fi_test
+GET /gap_fi_test.company/_mappings

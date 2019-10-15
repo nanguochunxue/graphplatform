@@ -1,0 +1,106 @@
+###########################################################################
+##DELETE index
+###########################################################################
+DELETE /es_search
+GET es_search/_mapping
+###########################################################################
+##Post mapping
+###########################################################################
+PUT /es_search
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "ik": {
+          "type": "custom",
+          "tokenizer": "ik_max_word"
+        }
+      }
+    }
+  },
+	"mappings": {
+		"es_search_person": {
+			"properties": {
+				"name": {
+					"type": "string",
+          "analyzer": "ik"
+				},
+				"age": {
+					"type": "integer"
+				},
+				"address": {
+					"type": "string",
+          "analyzer": "ik"
+				},
+        "attrNames": {
+          "properties": {
+            "attr": {
+              "type": "string"
+            },
+            "attrName": {
+              "type": "string",
+              "analyzer": "ik"
+            }
+          }
+        }
+			}
+		},
+    "es_search_company": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "analyzer": "ik"
+        },
+        "businessScope": {
+          "type": "string",
+          "analyzer": "ik"
+        }
+      }
+    }
+	}
+}
+
+###########################################################################
+##Post bulk data
+###########################################################################
+POST /es_search/es_search_person/_bulk
+{"index": {"_id": "1"}}
+{"name": "杨文利", "age": 20, "address": "广西桂林", "attrNames": [{"attr": "age", "attrName": "年龄"}]}
+{"index": {"_id": "2"}}
+{"name": "白红光", "age": 18, "address": "广东深圳", "attrNames": [{"attr": "age", "attrName": "年龄"}]}
+{"index": {"_id": "3"}}
+{"name": "杨斌", "aaa":"广东广州", "age": "32", "address": "广西桂林", "attrNames": [{"attr": "age", "attrName": "年龄"}]}
+
+POST /es_search/es_search_company/_bulk
+{"index": {"_id": "1"}}
+{"name": "中国华融资产管理股份有限公司", "businessScope": "互联网"}
+{"index": {"_id": "2"}}
+{"name": "招银华融理财资产管理股份有限公司", "businessScope": "服务业"}
+{"index": {"_id": "3"}}
+{"name": "华融资本管理有限公司", "businessScope": "服务业"}
+{"index": {"_id": "4"}}
+{"name": "招银华融资产管理股份有限公司", "businessScope": "服务业"}
+{"index": {"_id": "5"}}
+{"name": "中国人寿保险（集团）公司", "businessScope": "服务业"}
+{"index": {"_id": "6"}}
+{"name": "中国人寿财产保险股份有限公司", "businessScope": "服务业"}
+{"index": {"_id": "7"}}
+{"name": "中国人寿资产管理有限公司", "businessScope": "服务业"}
+
+POST /es_search/es_search_company/_bulk
+{"index": {"_id": "8"}}
+{"name": "山东天名茶业有限公司", "businessScope": "茶叶（绿茶、红碎茶、茉莉花茶、铁观音茶）分装、销售"}
+{"index": {"_id": "9"}}
+{"name": "中国人寿资产管理有限公司", "businessScope": "绿茶、花茶、铁观音生产、销售；精制茶、预包装食品、散装食品零售；农副产品销售"}
+{"index": {"_id": "10"}}
+{"name": "广东铁观音茶业有限公司", "businessScope": "绿茶、花茶、铁观音生产、销售；精制茶、预包装食品"}
+
+###########################################################################
+##Boost query test
+###########################################################################
+GET /es_search/_search
+{
+   "query": {
+      "match_all": {}
+   }
+}
